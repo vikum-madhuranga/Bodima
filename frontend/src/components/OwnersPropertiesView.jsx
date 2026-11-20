@@ -291,16 +291,16 @@ export default function OwnersPropertiesView({
 
                       {p.utility_notes && (
                         <div style={{ 
-                          fontSize: '0.8rem', 
+                          fontSize: '0.82rem', 
                           color: 'var(--text-secondary)', 
-                          background: 'rgba(0,0,0,0.25)', 
-                          padding: '10px', 
-                          borderRadius: '8px',
-                          border: '1px solid rgba(255,255,255,0.03)',
+                          background: 'rgba(255, 255, 255, 0.05)', 
+                          padding: '12px', 
+                          borderRadius: '10px',
+                          border: '1px solid rgba(255,255,255,0.08)',
                           marginBottom: '16px'
                         }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-muted)', marginBottom: '4px', fontSize: '0.74rem' }}>
-                            <FileText size={12} /> Utility & Amenities Notes:
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-emerald-light)', marginBottom: '5px', fontSize: '0.76rem', fontWeight: 600 }}>
+                            <FileText size={13} /> Utility & Amenities Notes:
                           </div>
                           {p.utility_notes}
                         </div>

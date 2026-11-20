@@ -123,7 +123,7 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
                 const isFull = totalCap > 0 && occ >= totalCap;
 
                 return (
-                  <div key={p.property_id} style={{ padding: '12px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.04)' }}>
+                  <div key={p.property_id} style={{ padding: '14px 16px', background: 'rgba(255, 255, 255, 0.06)', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.1)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
                       <div style={{ fontWeight: 600, color: '#f1f5f9', fontSize: '0.9rem' }}>
                         {p.property_name}
@@ -167,7 +167,7 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
 
               <button 
                 className="btn btn-secondary" 
-                style={{ height: '70px', flexDirection: 'column', gap: '6px', background: 'rgba(16, 185, 129, 0.08)', borderColor: 'rgba(16, 185, 129, 0.25)', color: '#34d399' }}
+                style={{ height: '70px', flexDirection: 'column', gap: '6px', background: 'rgba(52, 211, 153, 0.15)', borderColor: 'rgba(52, 211, 153, 0.35)', color: '#6ee7b7' }}
                 onClick={() => onNavigate('payments')}
               >
                 <PlusCircle size={20} />
@@ -175,7 +175,7 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
               </button>
             </div>
 
-            <div style={{ padding: '16px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+            <div style={{ padding: '18px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
                 <ShieldCheck size={18} style={{ color: '#10b981' }} />
                 <span style={{ fontSize: '0.86rem', fontWeight: 600, color: '#fff' }}>Relational Integrity Rules Active</span>

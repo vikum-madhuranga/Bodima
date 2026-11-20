@@ -194,23 +194,23 @@ export default function RoomsView({
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'space-between', 
-                    padding: '12px 14px', 
-                    background: 'rgba(255, 255, 255, 0.02)', 
-                    borderRadius: '8px', 
-                    border: '1px solid rgba(255,255,255,0.04)',
-                    marginBottom: '14px' 
+                    padding: '14px 16px', 
+                    background: 'rgba(255, 255, 255, 0.05)', 
+                    borderRadius: '10px', 
+                    border: '1px solid rgba(255,255,255,0.09)',
+                    marginBottom: '16px' 
                   }}>
                     <div>
-                      <span style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block' }}>
+                      <span style={{ fontSize: '0.74rem', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', fontWeight: 600 }}>
                         Monthly Rent
                       </span>
-                      <strong style={{ fontSize: '1.05rem', color: '#34d399' }}>
+                      <strong style={{ fontSize: '1.15rem', color: '#34d399' }}>
                         {formatLKR(room.monthly_rent)}
                       </strong>
                     </div>
 
                     <div style={{ textAlign: 'right' }}>
-                      <span style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block' }}>
+                      <span style={{ fontSize: '0.74rem', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', fontWeight: 600 }}>
                         Live Occupancy
                       </span>
                       <span className={`occupancy-badge ${isFull ? 'full' : occ > 0 ? 'part' : 'vacant'}`}>

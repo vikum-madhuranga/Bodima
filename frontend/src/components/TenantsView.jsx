@@ -186,7 +186,7 @@ export default function TenantsView({
                     </div>
                   </td>
                   <td>
-                    <span style={{ fontFamily: 'monospace', color: 'var(--text-silver)', background: 'rgba(255,255,255,0.03)', padding: '2px 6px', borderRadius: '4px' }}>
+                    <span style={{ fontFamily: 'monospace', color: '#ffffff', background: 'rgba(255,255,255,0.08)', padding: '3px 8px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.12)' }}>
                       {t.nic_or_reg_no}
                     </span>
                   </td>
