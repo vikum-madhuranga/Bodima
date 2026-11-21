@@ -8,7 +8,7 @@ import PaymentsView from './components/PaymentsView';
 import Notification from './components/Notification';
 import ConfirmModal from './components/ConfirmModal';
 import { api } from './api';
-import { RefreshCw, Server, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { RefreshCw, AlertTriangle } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -142,22 +142,6 @@ export default function App() {
           </div>
 
           <div className="topbar-actions">
-            {/* Backend Server Status Indicator */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '6px 12px',
-              background: backendOnline ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)',
-              border: `1px solid ${backendOnline ? 'rgba(16, 185, 129, 0.25)' : 'rgba(239, 68, 68, 0.25)'}`,
-              borderRadius: '9999px',
-              fontSize: '0.78rem',
-              color: backendOnline ? '#34d399' : '#f87171'
-            }}>
-              <Server size={14} />
-              <span>{backendOnline ? 'Backend Online (Port 8000)' : 'Backend Disconnected'}</span>
-            </div>
-
             <button 
               className="btn btn-secondary btn-sm"
               onClick={loadAllData}
