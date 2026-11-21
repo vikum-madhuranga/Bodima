@@ -158,22 +158,22 @@ export default function App() {
           <div style={{
             margin: '20px 32px 0',
             padding: '14px 18px',
-            background: 'rgba(239, 68, 68, 0.12)',
-            border: '1px solid rgba(239, 68, 68, 0.3)',
+            background: '#FEF2F2',
+            border: '1px solid #FECACA',
             borderRadius: '10px',
             display: 'flex',
             alignItems: 'flex-start',
             gap: '12px',
-            color: '#fecaca',
+            color: '#991B1B',
             fontSize: '0.86rem'
           }}>
-            <AlertTriangle size={20} style={{ color: '#f87171', flexShrink: 0, marginTop: '2px' }} />
+            <AlertTriangle size={20} style={{ color: '#DC2626', flexShrink: 0, marginTop: '2px' }} />
             <div>
-              <strong style={{ color: '#fff', display: 'block', marginBottom: '2px' }}>
+              <strong style={{ color: '#7F1D1D', display: 'block', marginBottom: '2px' }}>
                 Cannot connect to PHP REST API at http://localhost:8000
               </strong>
               Please ensure WampServer is running and start the PHP built-in server inside the `backend` folder:
-              <pre style={{ margin: '6px 0 0', padding: '6px 10px', background: 'rgba(0,0,0,0.4)', borderRadius: '6px', fontFamily: 'monospace', fontSize: '0.8rem', color: '#34d399' }}>
+              <pre style={{ margin: '6px 0 0', padding: '6px 10px', background: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '6px', fontFamily: 'monospace', fontSize: '0.8rem', color: '#047857' }}>
                 cd "E:\VIKUM\uni docs\2.2\Bodima_system\backend" ; php -S localhost:8000
               </pre>
             </div>

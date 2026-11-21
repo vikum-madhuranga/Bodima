@@ -14,8 +14,8 @@ export default function ConfirmModal({ isOpen, title, message, onConfirm, onCanc
                 width: '32px',
                 height: '32px',
                 borderRadius: '8px',
-                background: 'rgba(239, 68, 68, 0.15)',
-                color: '#ef4444',
+                background: '#FEE2E2',
+                color: '#DC2626',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'

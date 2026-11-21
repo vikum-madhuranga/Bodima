@@ -180,26 +180,26 @@ export default function TenantsView({
               {filteredTenants.map((t) => (
                 <tr key={t.tenant_id}>
                   <td>
-                    <div style={{ fontWeight: 600, color: '#fff' }}>{t.full_name}</div>
+                    <div style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{t.full_name}</div>
                     <div style={{ fontSize: '0.74rem', color: 'var(--text-muted)' }}>
                       ID: #{t.tenant_id}
                     </div>
                   </td>
                   <td>
-                    <span style={{ fontFamily: 'monospace', color: '#ffffff', background: 'rgba(255,255,255,0.08)', padding: '3px 8px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.12)' }}>
+                    <span style={{ fontFamily: 'monospace', color: 'var(--text-primary)', background: '#F1F5F9', padding: '3px 8px', borderRadius: '6px', border: '1px solid #CBD5E1' }}>
                       {t.nic_or_reg_no}
                     </span>
                   </td>
                   <td>
                     <a 
                       href={`tel:${t.phone}`} 
-                      style={{ color: 'var(--accent-emerald-light)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}
+                      style={{ color: '#059669', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}
                     >
                       <Phone size={13} /> {t.phone}
                     </a>
                   </td>
                   <td>
-                    <div style={{ fontWeight: 500, color: '#f1f5f9' }}>
+                    <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>
                       {t.room_number}
                     </div>
                     <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>

@@ -231,7 +231,7 @@ export default function PaymentsView({
                     </span>
                   </td>
                   <td>
-                    <div style={{ fontWeight: 600, color: '#fff' }}>{p.tenant_name}</div>
+                    <div style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{p.tenant_name}</div>
                     <div style={{ fontSize: '0.74rem', color: 'var(--text-muted)' }}>
                       {p.nic_or_reg_no}
                     </div>
@@ -239,11 +239,11 @@ export default function PaymentsView({
                   <td>{p.property_name}</td>
                   <td>{p.room_number}</td>
                   <td>
-                    <span style={{ fontFamily: 'monospace', color: '#ffffff', background: 'rgba(255,255,255,0.08)', padding: '3px 8px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.12)' }}>
+                    <span style={{ fontFamily: 'monospace', color: 'var(--text-primary)', background: '#F1F5F9', padding: '3px 8px', borderRadius: '6px', border: '1px solid #CBD5E1' }}>
                       {p.billing_month}
                     </span>
                   </td>
-                  <td style={{ fontWeight: 600, color: '#34d399' }}>
+                  <td style={{ fontWeight: 600, color: '#059669' }}>
                     {formatLKR(p.amount_paid)}
                   </td>
                   <td style={{ color: 'var(--text-muted)' }}>{p.payment_date}</td>

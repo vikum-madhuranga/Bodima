@@ -104,7 +104,7 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
         <div className="glass-card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px' }}>
             <div>
-              <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: '#fff' }}>Property Occupancy Status</h3>
+              <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)' }}>Property Occupancy Status</h3>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Live capacity vs occupied beds</p>
             </div>
             <button className="btn btn-secondary btn-sm" onClick={() => onNavigate('properties')}>
@@ -123,9 +123,9 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
                 const isFull = totalCap > 0 && occ >= totalCap;
 
                 return (
-                  <div key={p.property_id} style={{ padding: '14px 16px', background: 'rgba(255, 255, 255, 0.06)', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                  <div key={p.property_id} style={{ padding: '14px 16px', background: 'var(--bg-card-subtle)', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                      <div style={{ fontWeight: 600, color: '#f1f5f9', fontSize: '0.9rem' }}>
+                      <div style={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '0.9rem' }}>
                         {p.property_name}
                         <span className={`badge badge-gender-${p.gender_type.toLowerCase()}`} style={{ marginLeft: '8px', fontSize: '0.7rem' }}>
                           {p.gender_type}
@@ -152,7 +152,7 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
         {/* Quick Operations & System Highlights */}
         <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
           <div>
-            <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: '#fff', marginBottom: '4px' }}>Quick Actions</h3>
+            <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '4px' }}>Quick Actions</h3>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '20px' }}>Streamline day-to-day boarding operations</p>
             
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginBottom: '24px' }}>
@@ -167,7 +167,7 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
 
               <button 
                 className="btn btn-secondary" 
-                style={{ height: '70px', flexDirection: 'column', gap: '6px', background: 'rgba(52, 211, 153, 0.15)', borderColor: 'rgba(52, 211, 153, 0.35)', color: '#6ee7b7' }}
+                style={{ height: '70px', flexDirection: 'column', gap: '6px', background: '#ECFDF5', borderColor: '#A7F3D0', color: '#047857' }}
                 onClick={() => onNavigate('payments')}
               >
                 <PlusCircle size={20} />
@@ -175,10 +175,10 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
               </button>
             </div>
 
-            <div style={{ padding: '18px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+            <div style={{ padding: '18px', background: 'var(--bg-card-subtle)', borderRadius: '12px', border: '1px solid var(--border-subtle)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                <ShieldCheck size={18} style={{ color: '#10b981' }} />
-                <span style={{ fontSize: '0.86rem', fontWeight: 600, color: '#fff' }}>Relational Integrity Rules Active</span>
+                <ShieldCheck size={18} style={{ color: '#059669' }} />
+                <span style={{ fontSize: '0.86rem', fontWeight: 600, color: 'var(--text-primary)' }}>Relational Integrity Rules Active</span>
               </div>
               <ul style={{ paddingLeft: '20px', fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
                 <li>Overbooking strictly blocked at backend database & API level.</li>
@@ -201,7 +201,7 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
       <div className="glass-card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px' }}>
           <div>
-            <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: '#fff' }}>Recent Rent Payments</h3>
+            <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)' }}>Recent Rent Payments</h3>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Latest transactions logged across properties</p>
           </div>
           <button className="btn btn-secondary btn-sm" onClick={() => onNavigate('payments')}>
@@ -232,11 +232,11 @@ export default function DashboardView({ data, loading, onNavigate, onRefresh }) 
               ) : (
                 recentPayments.map((p) => (
                   <tr key={p.payment_id}>
-                    <td style={{ fontWeight: 600, color: '#fff' }}>{p.tenant_name}</td>
+                    <td style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{p.tenant_name}</td>
                     <td>{p.property_name}</td>
                     <td>{p.room_number}</td>
                     <td><span style={{ fontFamily: 'monospace' }}>{p.billing_month}</span></td>
-                    <td style={{ fontWeight: 600, color: '#34d399' }}>{formatLKR(p.amount_paid)}</td>
+                    <td style={{ fontWeight: 600, color: '#059669' }}>{formatLKR(p.amount_paid)}</td>
                     <td style={{ color: 'var(--text-muted)' }}>{p.payment_date}</td>
                     <td>
                       <span className={`badge badge-${p.status.toLowerCase()}`}>

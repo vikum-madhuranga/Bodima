@@ -183,7 +183,7 @@ export default function OwnersPropertiesView({
     <div>
       {/* Sub tabs header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
-        <div style={{ display: 'flex', gap: '8px', background: 'rgba(255,255,255,0.03)', padding: '4px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
+        <div style={{ display: 'flex', gap: '8px', background: 'var(--bg-card-subtle)', padding: '4px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
           <button 
             className={`btn btn-sm ${activeSubTab === 'properties' ? 'btn-primary' : 'btn-secondary'}`}
             onClick={() => setActiveSubTab('properties')}
@@ -254,7 +254,7 @@ export default function OwnersPropertiesView({
                     <div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
                         <div>
-                          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#fff', marginBottom: '4px' }}>
+                          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '4px' }}>
                             {p.property_name}
                           </h3>
                           <span className={`badge badge-gender-${p.gender_type.toLowerCase()}`}>
@@ -286,17 +286,17 @@ export default function OwnersPropertiesView({
 
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontSize: '0.82rem', marginBottom: '14px' }}>
                         <UserCheck size={14} style={{ flexShrink: 0 }} />
-                        <span>Owner: <strong style={{ color: '#fff' }}>{p.owner_name}</strong> ({p.owner_phone})</span>
+                        <span>Owner: <strong style={{ color: 'var(--text-primary)' }}>{p.owner_name}</strong> ({p.owner_phone})</span>
                       </div>
 
                       {p.utility_notes && (
                         <div style={{ 
                           fontSize: '0.82rem', 
                           color: 'var(--text-secondary)', 
-                          background: 'rgba(255, 255, 255, 0.05)', 
+                          background: 'var(--bg-card-subtle)', 
                           padding: '12px', 
                           borderRadius: '10px',
-                          border: '1px solid rgba(255,255,255,0.08)',
+                          border: '1px solid var(--border-subtle)',
                           marginBottom: '16px'
                         }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-emerald-light)', marginBottom: '5px', fontSize: '0.76rem', fontWeight: 600 }}>
@@ -356,9 +356,9 @@ export default function OwnersPropertiesView({
                 <tbody>
                   {owners.map((o) => (
                     <tr key={o.owner_id}>
-                      <td style={{ fontWeight: 600, color: '#fff' }}>{o.full_name}</td>
+                      <td style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{o.full_name}</td>
                       <td>
-                        <a href={`tel:${o.phone}`} style={{ color: 'var(--accent-emerald-light)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <a href={`tel:${o.phone}`} style={{ color: '#059669', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
                           <Phone size={13} /> {o.phone}
                         </a>
                       </td>

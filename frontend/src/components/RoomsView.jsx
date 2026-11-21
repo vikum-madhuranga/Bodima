@@ -162,8 +162,8 @@ export default function RoomsView({
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                        <DoorOpen size={18} style={{ color: 'var(--accent-emerald-light)' }} />
-                        <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#fff' }}>
+                        <DoorOpen size={18} style={{ color: '#059669' }} />
+                        <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                           {room.room_number}
                         </h3>
                       </div>
@@ -195,16 +195,16 @@ export default function RoomsView({
                     alignItems: 'center', 
                     justifyContent: 'space-between', 
                     padding: '14px 16px', 
-                    background: 'rgba(255, 255, 255, 0.05)', 
+                    background: 'var(--bg-card-subtle)', 
                     borderRadius: '10px', 
-                    border: '1px solid rgba(255,255,255,0.09)',
+                    border: '1px solid var(--border-subtle)',
                     marginBottom: '16px' 
                   }}>
                     <div>
                       <span style={{ fontSize: '0.74rem', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'block', fontWeight: 600 }}>
                         Monthly Rent
                       </span>
-                      <strong style={{ fontSize: '1.15rem', color: '#34d399' }}>
+                      <strong style={{ fontSize: '1.15rem', color: '#059669' }}>
                         {formatLKR(room.monthly_rent)}
                       </strong>
                     </div>
@@ -221,7 +221,7 @@ export default function RoomsView({
 
                   <div style={{ fontSize: '0.82rem', color: 'var(--text-silver)', marginBottom: '8px', display: 'flex', justifyContent: 'space-between' }}>
                     <span>Capacity: <strong>{cap} Beds</strong></span>
-                    <span style={{ color: vacant > 0 ? '#34d399' : '#f87171' }}>
+                    <span style={{ color: vacant > 0 ? '#059669' : '#DC2626' }}>
                       <strong>{vacant}</strong> bed(s) available
                     </span>
                   </div>
